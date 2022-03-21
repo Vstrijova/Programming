@@ -24,5 +24,6 @@ weatherData = json.loads(response.text) #trasformiamo i dati da Json in Python
 #from pprint import pprint 
 #pprint(weatherData) 
 
-st.write(weatherData['main']['temp_max']) 
+#st.write(weatherData['main']['temp_max']) 
+st.write(weatherData)
 
