@@ -1,6 +1,9 @@
 import streamlit as st
 import json, requests 
 
+st.header("Welcome to OpenWeather")
+title = st.tetx_input("Insert a location:", help="insert here the location you want the weather")
+
 APIkey = '2a2b2ebeb8f6b2026e0336fa02e72143'
 location = 'london'
 
@@ -22,6 +25,5 @@ weatherData = json.loads(response.text)
 # print(weatherData) 
 # from pprint import pprint 
 # pprint(weatherData) 
+st.write('the maximum temperature in your location is:' weatherData['main']['temp_max']) 
 
-print(weatherData['main']['temp_max']) 
-# more???????????
