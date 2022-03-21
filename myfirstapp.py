@@ -1,10 +1,28 @@
 import streamlit as st
-st.header("hello world! :)")
-title = st.text_input('Gimme a movie title:', 'insert here your title')
-st.write('The current movie title is', title)
 
-genre = st.radio("What's your favorite movie genre",('Comedy', 'Drama', 'Documentary'), help='click on one of the 3 options')
-if genre == 'Comedy':
-     st.write('You selected comedy.')
-else:
-     st.write("You didn't select comedy.")
+st.header("Welcome to OpenWeather")
+title = st.tetx_input("Insert a location:", help="insert here the location you want the weather")
+
+import json, requests 
+APIkey = '2a2b2ebeb8f6b2026e0336fa02e72143'
+location = st.tetx_input("Insert a location:", help="insert here the location you want the weather")
+# check API documentation to see what structure of URL is needed to access the data
+# http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
+url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
+# print(url)
+
+
+# Download the JSON data from OpenWeatherMap.org's API.
+response = requests.get(url)  
+# Uncomment to see the raw JSON text:
+# print(response.text)  
+
+
+# Load JSON data into a Python variable.
+weatherData = json.loads(response.text)
+# Uncomment to see the raw JSON text:
+# print(weatherData) 
+# from pprint import pprint 
+# pprint(weatherData) 
+
+st.write('the maximum temperature in your location is:' weatherData['main']['temp_max'])
