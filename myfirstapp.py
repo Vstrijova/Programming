@@ -1,7 +1,6 @@
 import streamlit as st
 
 st.header("Welcome to OpenWeather")
-title = st.tetx_input("Insert a location:", help="insert here the location you want the weather")
 
 import json, requests 
 APIkey = '2a2b2ebeb8f6b2026e0336fa02e72143'
