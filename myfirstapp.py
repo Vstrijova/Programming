@@ -21,7 +21,7 @@ response = requests.get(url)
 weatherData = json.loads(response.text)
 # Uncomment to see the raw JSON text:
 # print(weatherData) 
-# from pprint import pprint 
-# pprint(weatherData) 
+from pprint import pprint 
+pprint(weatherData) 
 
 st.write('the maximum temperature in your location is:', weatherData['main']['temp_max'])
