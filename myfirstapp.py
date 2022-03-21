@@ -25,4 +25,4 @@ weatherData = json.loads(response.text)
 # from pprint import pprint 
 # pprint(weatherData) 
 
-st.write('the maximum temperature in your location is:' weatherData['main']['temp_max'])
+st.write('the maximum temperature in your location is:', weatherData['main']['temp_max'])
