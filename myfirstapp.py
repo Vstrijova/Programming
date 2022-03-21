@@ -7,7 +7,7 @@ APIkey = '2a2b2ebeb8f6b2026e0336fa02e72143'
 location = st.text_input('Insert a location:')
 # check API documentation to see what structure of URL is needed to access the data
 # http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
-url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey
+url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=' + APIkey + '&units=metric'
 #print(url)
 
 
@@ -21,8 +21,8 @@ response = requests.get(url)
 weatherData = json.loads(response.text) #trasformiamo i dati da Json in Python
 # Uncomment to see the raw JSON text:
 #print(weatherData) 
-from pprint import pprint 
-pprint(weatherData) 
+#from pprint import pprint 
+#pprint(weatherData) 
 
 st.write(weatherData['main']['temp_max']) 
 
