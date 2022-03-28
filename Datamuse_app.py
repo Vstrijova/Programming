@@ -13,7 +13,7 @@ url2 = 'https://api.datemuse.com/words?&rel_syn=' + yourword + '&max=3'
 url3 = 'https://api.datemuse.com/words?&rel_ant=' + yourword + '&max=3'
 
 yourword1 = requests.get(url1)
-youword2 = requests.get(url2)
+yourword2 = requests.get(url2)
 yourword3 = requests.get(url3)
 
 yourworddef = json.loads(yourword1.text)
