@@ -3,7 +3,7 @@ import json, requests
 
 st.markdown("Welcome to **MyDictionary**")
 
-keyword = st.text_input('Enter a word:', 'sky')
+keyword = st.text_input('Enter a word:', 'sky', help="after entering a new word press enter again")
 option = st.selectbox('What are you looking for?',('Meaning', 'Synonyms', 'Antonyms'))
 
 url_a = 'https://api.datamuse.com/words?ml=' + keyword + '&max=5'
