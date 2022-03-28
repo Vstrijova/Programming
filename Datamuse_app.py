@@ -5,10 +5,10 @@ st.markdown("Welcome to **MyDictionary**")
 import json, requests 
 
 yourword = st.text_input('Enter a word:', 'sky')
-option = st.selectbox('What are you looking for?',('Definitions', 'Synonyms', 'Antonyms'))
+option = st.selectbox('What are you looking for?',('Meaning', 'Synonyms', 'Antonyms'))
 
 #st.write('You selected:', option)
-url1 = 'https://api.datemuse.com/words?&md_d=' + yourword + '&max=3'
+url1 = 'https://api.datemuse.com/words?&ml=' + yourword + '&max=3'
 url2 = 'https://api.datemuse.com/words?&rel_syn=' + yourword + '&max=3'
 url3 = 'https://api.datemuse.com/words?&rel_ant=' + yourword + '&max=3'
 
@@ -21,7 +21,7 @@ yourwordsyn = json.loads(yourword2.text)
 yourwordant = json.loads(yourword3.text)
 
 for word in yourword:
-  if option == 'Definitions':
+  if option == 'Meaning':
     print(yourworddef)
   elif option == 'Synonyms':
     print(yourwordsyn)
