@@ -22,10 +22,10 @@ yourwordant = json.loads(yourword3.text)
 
 for word in yourword:
   if option == 'Meaning':
-    print(yourworddef)
+    st.write(yourworddef)
   elif option == 'Synonyms':
-    print(yourwordsyn)
+    st.write(yourwordsyn)
   elif option == 'Antonyms':
-    print(yourwordant)
+    st.write(yourwordant)
   else:
     pass
