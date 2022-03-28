@@ -20,12 +20,11 @@ yourworddef = json.loads(yourword1.text)
 yourwordsyn = json.loads(yourword2.text)
 yourwordant = json.loads(yourword3.text)
 
-for word in yourword:
-  if option == 'Meaning':
-    st.write(yourworddef)
-  elif option == 'Synonyms':
-    st.write(yourwordsyn)
-  elif option == 'Antonyms':
-    st.write(yourwordant)
-  else:
-    pass
+if option == 'Meaning':
+  st.write(yourworddef)
+elif option == 'Synonyms':
+  st.write(yourwordsyn)
+elif option == 'Antonyms':
+  st.write(yourwordant)
+else:
+  pass
