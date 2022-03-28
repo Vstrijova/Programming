@@ -4,7 +4,7 @@ import json, requests
 st.markdown("Welcome to **MyDictionary**")
 
 keyword = st.text_input('Enter a word:', 'sky')
-option = st.selectbox('What are you looking for?',('Meaning', 'Synonyms', 'Antonyms'), help="after entering a new word press enter again")
+option = st.selectbox('What are you looking for?',('Meaning', 'Synonyms', 'Antonyms'), help="after changing your preferrings press enter again")
 url_a = 'https://api.datamuse.com/words?ml=' + keyword + '&max=5'
 url_b = 'https://api.datamuse.com/words?rel_syn=' + keyword + '&max=5'
 url_c = 'https://api.datamuse.com/words?rel_ant=' + keyword + '&max=5'
