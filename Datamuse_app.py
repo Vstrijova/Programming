@@ -21,11 +21,11 @@ yourwordsyn = json.loads(yourword2.text)
 yourwordant = json.loads(yourword3.text)
 
 for word in yourword:
-  if option = 'Definitions':
+  if option == 'Definitions':
     print(yourworddef)
-  elif option = 'Synonyms':
+  elif option == 'Synonyms':
     print(yourwordsyn)
-  elif option = 'Antonyms':
+  elif option == 'Antonyms':
     print(yourwordant)
   else:
     pass
