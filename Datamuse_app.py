@@ -20,10 +20,13 @@ response_c = requests.get(url_c)
 dataFromDatamuse_c = json.loads(response_c.text)
 
 if option == 'Meaning':
-  st.write(dataFromDatamuse_a)
+  for el in dataFromDatamuse_a:
+    st.write(el['word'])
 elif option == 'Synonyms':
-  st.write(dataFromDatamuse_b)
+  for el in dataFromDatamuse_b:
+    st.write(el['word'])
 elif option == 'Antonyms':
-  st.write(dataFromDatamuse_c)
+  for el in dataFromDatamuse_c:
+    st.write(el['word'])
 else:
   pass
