@@ -3,8 +3,6 @@ import json, requests
 
 st.markdown("Welcome to **MyDictionary**")
 
-
-
 keyword = st.text_input('Enter a word:', 'sky')
 option = st.selectbox('What are you looking for?',('Meaning', 'Synonyms', 'Antonyms'))
 
